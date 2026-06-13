@@ -1,0 +1,66 @@
+/* =============================================================
+   DESIGN TOKENS — Luis Badel · Edición Atelier
+   Sistema editorial: tipografía Fraunces + Sora, paleta terracota
+   sobre crema, acentos en oliva y mostaza.
+   ============================================================= */
+
+:root {
+  /* --- Color --- */
+  --clay: #c1542e;
+  --clay-deep: #9a3f20;
+  --cream: #f7f1e6;
+  --paper: #fffdf9;
+  --ink: #231f1c;
+  --ink-soft: #4a4540;
+  --olive: #454f3c;
+  --olive-deep: #2f362a;
+  --mustard: #d9a13b;
+  --blush: #ecceb9;
+  --line: rgba(35, 31, 28, 0.12);
+  --line-on-dark: rgba(247, 241, 230, 0.16);
+
+  /* --- Tipografía --- */
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Sora', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  /* --- Tamaños fluidos --- */
+  --size-hero: clamp(2.75rem, 9vw, 7.5rem);
+  --size-h2: clamp(2.25rem, 5.5vw, 4.25rem);
+  --size-h3: clamp(1.5rem, 3vw, 2.25rem);
+  --size-lead: clamp(1.125rem, 1.6vw, 1.375rem);
+  --size-body: 1rem;
+  --size-small: 0.875rem;
+  --size-label: 0.75rem;
+
+  /* --- Layout --- */
+  --container-width: 1320px;
+  --container-pad: clamp(1.25rem, 5vw, 4rem);
+  --index-nav-width: 84px;
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 28px;
+
+  /* --- Espaciado --- */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 7rem;
+
+  /* --- Movimiento --- */
+  --duration-fast: 200ms;
+  --duration-base: 450ms;
+  --duration-slow: 900ms;
+  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* --- Sombras --- */
+  --shadow-card: 0 18px 50px -20px rgba(35, 31, 28, 0.35);
+  --shadow-soft: 0 8px 24px -12px rgba(35, 31, 28, 0.22);
+
+  /* --- Capas --- */
+  --z-index-nav: 100;
+  --z-header: 90;
+  --z-menu: 110;
+  --z-cursor: 120;
+}

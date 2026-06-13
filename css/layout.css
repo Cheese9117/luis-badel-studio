@@ -1,0 +1,182 @@
+/* =============================================================
+   LAYOUT — Luis Badel · Edición Atelier
+   Contenedores, grid editorial y nav lateral de índice.
+   ============================================================= */
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+main {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding-left: var(--index-nav-width);
+  }
+}
+
+/* ── Nav de índice lateral (desktop) ── */
+.index-nav {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .index-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    inset-block: 0;
+    left: 0;
+    width: var(--index-nav-width);
+    padding-block: var(--space-md);
+    border-right: 1px solid var(--line);
+    background: var(--cream);
+    z-index: var(--z-index-nav);
+  }
+
+  .index-nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    align-items: center;
+  }
+
+  .index-nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: var(--size-label);
+    color: var(--ink-soft);
+    transition: color var(--duration-fast) var(--ease-editorial);
+  }
+
+  .index-nav__num {
+    writing-mode: vertical-rl;
+    letter-spacing: 0.2em;
+  }
+
+  .index-nav__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--line);
+    transition: background var(--duration-fast) var(--ease-editorial), transform var(--duration-fast) var(--ease-editorial);
+  }
+
+  .index-nav__link:hover,
+  .index-nav__link.is-active {
+    color: var(--clay);
+  }
+
+  .index-nav__link.is-active .index-nav__dot {
+    background: var(--clay);
+    transform: scale(1.6);
+  }
+
+  .index-nav__brand {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-style: italic;
+    letter-spacing: 0.04em;
+  }
+}
+
+/* ── Header ── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--container-pad);
+  background: rgba(247, 241, 230, 0.86);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+@media (min-width: 1024px) {
+  .site-header {
+    display: none;
+  }
+}
+
+.site-header__brand {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-style: italic;
+}
+
+/* ── Secciones generales ── */
+.section {
+  padding-block: var(--space-xl);
+}
+
+.section--tight {
+  padding-block: var(--space-lg);
+}
+
+.section--dark {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.section--olive {
+  background: var(--olive-deep);
+  color: var(--cream);
+}
+
+.section--clay {
+  background: var(--clay);
+  color: var(--paper);
+}
+
+.section--dark h1, .section--dark h2, .section--dark h3, .section--dark h4,
+.section--olive h1, .section--olive h2, .section--olive h3, .section--olive h4 {
+  color: var(--cream);
+}
+
+/* ── Grids ── */
+.split-grid {
+  display: grid;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .split-grid {
+    grid-template-columns: 1.1fr 1fr;
+    gap: var(--space-xl);
+  }
+
+  .split-grid--reverse {
+    grid-template-columns: 1fr 1.1fr;
+  }
+
+  .split-grid--reverse > :first-child {
+    order: 2;
+  }
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+@media (min-width: 700px) {
+  .stat-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
