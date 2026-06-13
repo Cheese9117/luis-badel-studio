@@ -137,30 +137,29 @@
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <!-- ═══ NAV DE ÍNDICE (desktop) ═══ -->
-  <nav class="index-nav" aria-label="Índice de secciones">
-    <a class="index-nav__brand" href="#inicio">Luis Badel</a>
-    <div class="index-nav__body">
-      <p class="index-nav__header">Secciones</p>
-      <ul class="index-nav__list">
-        <li><a class="index-nav__link" href="#inicio" data-section="inicio"><span class="index-nav__num">01</span><span class="index-nav__name">Inicio</span></a></li>
-        <li><a class="index-nav__link" href="#filosofia" data-section="filosofia"><span class="index-nav__num">02</span><span class="index-nav__name">Filosofía</span></a></li>
-        <li><a class="index-nav__link" href="#servicios" data-section="servicios"><span class="index-nav__num">03</span><span class="index-nav__name">Servicios</span></a></li>
-        <li><a class="index-nav__link" href="#galeria" data-section="galeria"><span class="index-nav__num">04</span><span class="index-nav__name">Galería</span></a></li>
-        <li><a class="index-nav__link" href="#estilista" data-section="estilista"><span class="index-nav__num">05</span><span class="index-nav__name">Equipo</span></a></li>
-        <li><a class="index-nav__link" href="#testimonios" data-section="testimonios"><span class="index-nav__num">06</span><span class="index-nav__name">Testimonios</span></a></li>
-        <li><a class="index-nav__link" href="#reserva" data-section="reserva"><span class="index-nav__num">07</span><span class="index-nav__name">Reserva</span></a></li>
-      </ul>
-    </div>
-    <a class="btn btn--primary index-nav__cta" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer" aria-label="Reservar por WhatsApp">WhatsApp</a>
-  </nav>
+  <!-- ═══ BARRA DE ANUNCIO ═══ -->
+  <div class="announce-bar">
+    <p class="announce-bar__text">Más de 18 años de experiencia en Laureles, Medellín</p>
+    <a class="announce-bar__link" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer">Agenda tu cita →</a>
+  </div>
 
-  <!-- ═══ HEADER (mobile/tablet) ═══ -->
-  <header class="site-header">
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header" id="site-header">
     <a class="site-header__brand" href="#inicio">Luis Badel</a>
-    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
-      <span></span><span></span><span></span>
-    </button>
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a class="site-nav__link" href="#filosofia" data-section="filosofia">Filosofía</a>
+      <a class="site-nav__link" href="#servicios" data-section="servicios">Servicios</a>
+      <a class="site-nav__link" href="#galeria" data-section="galeria">Galería</a>
+      <a class="site-nav__link" href="#estilista" data-section="estilista">Equipo</a>
+      <a class="site-nav__link" href="#testimonios" data-section="testimonios">Testimonios</a>
+      <a class="site-nav__link" href="#faq" data-section="faq">FAQ</a>
+    </nav>
+    <div class="site-header__actions">
+      <a class="btn btn--primary btn--sm site-header__cta" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer">Reservar</a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 
   <!-- ═══ MENÚ MÓVIL ═══ -->
@@ -171,7 +170,8 @@
     <a class="mobile-menu__link" href="#galeria"><span>04</span> Galería</a>
     <a class="mobile-menu__link" href="#estilista"><span>05</span> Equipo</a>
     <a class="mobile-menu__link" href="#testimonios"><span>06</span> Testimonios</a>
-    <a class="mobile-menu__link" href="#reserva"><span>07</span> Reserva</a>
+    <a class="mobile-menu__link" href="#faq"><span>07</span> FAQ</a>
+    <a class="mobile-menu__link" href="#reserva"><span>08</span> Reserva</a>
     <div class="mobile-menu__footer">
       <a href="https://wa.me/573167302467" target="_blank" rel="noopener noreferrer">WhatsApp</a>
       <a href="https://www.instagram.com/luisbadelsaladebelleza/" target="_blank" rel="noopener noreferrer">Instagram</a>
@@ -422,6 +422,16 @@
       </div>
     </section>
 
+    <!-- ═══ BONO DE REGALO ═══ -->
+    <section class="section section--olive section--lazy" id="bono">
+      <div class="container giftcard" data-reveal>
+        <span class="eyebrow">Bono de regalo</span>
+        <h2 class="section-title">Regala una <em>experiencia</em>, no un objeto.</h2>
+        <p class="lead lead--on-dark lead--wide">Un bono de Luis Badel es un corte, un color o un cambio de look para esa persona que querés consentir. Lo personalizamos por el monto o el servicio que prefieras y lo entregamos digital o impreso.</p>
+        <a class="btn btn--light btn--lg" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20regalar%20un%20bono%20de%20Luis%20Badel" target="_blank" rel="noopener noreferrer">Pedir un bono por WhatsApp</a>
+      </div>
+    </section>
+
     <!-- ═══ FAQ ═══ -->
     <section class="section section--tight section--lazy" id="faq">
       <div class="container">
@@ -480,6 +490,15 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    <!-- ═══ COMUNIDAD ═══ -->
+    <section class="section section--tight section--lazy" id="comunidad">
+      <div class="container community" data-reveal>
+        <span class="eyebrow">Comunidad</span>
+        <h2 class="section-title">Seguí nuestro trabajo en <em>Instagram</em>.</h2>
+        <p class="lead">Cada semana publicamos cambios de look, color y el detrás de cámaras del salón. Seguinos en @luisbadelsaladebelleza y mirá resultados reales antes de tu cita.</p>
+        <a class="btn btn--outline btn--lg" href="https://www.instagram.com/luisbadelsaladebelleza/" target="_blank" rel="noopener noreferrer">Seguir en Instagram</a>
       </div>
     </section>
   </main>

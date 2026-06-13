@@ -42,7 +42,7 @@ function initMobileMenu() {
 }
 
 function initScrollSpy() {
-  const links = document.querySelectorAll('.index-nav__link');
+  const links = document.querySelectorAll('.site-nav__link');
   if (!links.length) return;
 
   const sections = Array.from(links)
