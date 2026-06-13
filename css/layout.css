@@ -41,11 +41,24 @@ main {
     z-index: var(--z-index-nav);
   }
 
+  .index-nav__caption {
+    writing-mode: vertical-rl;
+    font-family: var(--font-mono);
+    font-size: var(--size-label);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--clay);
+  }
+
   .index-nav__list {
     display: flex;
     flex-direction: column;
     gap: var(--space-md);
     align-items: center;
+  }
+
+  .index-nav__link {
+    cursor: pointer;
   }
 
   .index-nav__link {
@@ -125,6 +138,12 @@ main {
 
 .section--tight {
   padding-block: var(--space-lg);
+}
+
+/* Difiere el render de secciones por debajo del pliegue */
+.section--lazy {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 700px;
 }
 
 .section--dark {

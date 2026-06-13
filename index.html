@@ -12,7 +12,7 @@
   <link rel="canonical" href="https://cheese9117.github.io/luis-badel-studio/" />
 
   <!-- ═══ SEGURIDAD ═══ -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none';" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'none'; frame-src https://www.google.com https://maps.google.com; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none';" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
@@ -140,6 +140,7 @@
   <!-- ═══ NAV DE ÍNDICE (desktop) ═══ -->
   <nav class="index-nav" aria-label="Índice de secciones">
     <a class="index-nav__brand" href="#inicio">Luis Badel</a>
+    <p class="index-nav__caption">Navegá ↓</p>
     <ul class="index-nav__list">
       <li><a class="index-nav__link" href="#inicio" data-section="inicio"><span class="index-nav__dot"></span><span class="index-nav__num">01 — Inicio</span></a></li>
       <li><a class="index-nav__link" href="#filosofia" data-section="filosofia"><span class="index-nav__dot"></span><span class="index-nav__num">02 — Filosofía</span></a></li>
@@ -243,13 +244,20 @@
     <!-- ═══ SERVICIOS ═══ -->
     <section class="section" id="servicios">
       <div class="container">
-        <div data-reveal>
-          <span class="eyebrow">Catálogo de servicios</span>
-          <h2 class="section-title">Lo que hacemos <em>mejor</em>.</h2>
-          <p class="lead">Seis especialidades, un mismo nivel de detalle. Deslizá para ver el catálogo completo.</p>
-        </div>
+        <div class="rail" data-rail>
+          <div class="rail-head" data-reveal>
+            <div class="rail-head__intro">
+              <span class="eyebrow">Catálogo de servicios</span>
+              <h2 class="section-title">Lo que hacemos <em>mejor</em>.</h2>
+              <p class="lead">Seis especialidades, un mismo nivel de detalle. Deslizá o usá las flechas para ver el catálogo completo.</p>
+            </div>
+            <div class="rail-controls">
+              <button class="rail-arrow" type="button" data-rail-prev aria-label="Ver servicios anteriores">&#8592;</button>
+              <button class="rail-arrow" type="button" data-rail-next aria-label="Ver más servicios">&#8594;</button>
+            </div>
+          </div>
 
-        <div class="service-rail u-mt-lg" data-reveal="stagger">
+        <div class="service-rail u-mt-lg" data-rail-track data-reveal="stagger">
           <article class="service-card">
             <span class="service-card__num">01 / Cabello</span>
             <h3 class="service-card__title">Corte y Estilizado</h3>
@@ -287,6 +295,7 @@
             <div class="service-card__price"><span>Desde</span><span>$60.000 COP</span></div>
           </article>
         </div>
+        </div>
 
         <p class="u-mt-md">
           <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20conocer%20todos%20los%20servicios%20disponibles" target="_blank" rel="noopener noreferrer">Consultar precio exacto por WhatsApp →</a>
@@ -295,7 +304,7 @@
     </section>
 
     <!-- ═══ GALERÍA ═══ -->
-    <section class="section section--tight" id="galeria">
+    <section class="section section--tight section--lazy" id="galeria">
       <div class="container">
         <div data-reveal>
           <span class="eyebrow">Galería</span>
@@ -370,14 +379,21 @@
     </section>
 
     <!-- ═══ TESTIMONIOS ═══ -->
-    <section class="section" id="testimonios">
+    <section class="section section--lazy" id="testimonios">
       <div class="container">
-        <div data-reveal>
-          <span class="eyebrow">Lo que dicen</span>
-          <h2 class="section-title">Clientas y <em>clientes</em>.</h2>
-        </div>
+        <div class="rail" data-rail>
+          <div class="rail-head" data-reveal>
+            <div class="rail-head__intro">
+              <span class="eyebrow">Lo que dicen</span>
+              <h2 class="section-title">Clientas y <em>clientes</em>.</h2>
+            </div>
+            <div class="rail-controls">
+              <button class="rail-arrow" type="button" data-rail-prev aria-label="Ver testimonios anteriores">&#8592;</button>
+              <button class="rail-arrow" type="button" data-rail-next aria-label="Ver más testimonios">&#8594;</button>
+            </div>
+          </div>
 
-        <div class="quote-track u-mt-lg">
+        <div class="quote-track u-mt-lg" data-rail-track>
           <blockquote class="quote-card">
             <p class="quote-card__text">"Llevo años yendo donde Luis y siempre salgo con el cabello más sano que cuando entré. El balayage que me hizo fue exactamente lo que quería."</p>
             <footer class="quote-card__author">
@@ -400,11 +416,12 @@
             </footer>
           </blockquote>
         </div>
+        </div>
       </div>
     </section>
 
     <!-- ═══ FAQ ═══ -->
-    <section class="section section--tight" id="faq">
+    <section class="section section--tight section--lazy" id="faq">
       <div class="container">
         <div data-reveal>
           <span class="eyebrow">Preguntas frecuentes</span>
@@ -441,7 +458,7 @@
           <p class="lead lead--on-clay lead--wide">Escribinos contándonos qué servicio buscás y te confirmamos disponibilidad. Sin formularios largos, sin esperas.</p>
           <div class="hero__cta-group">
             <a class="btn btn--light btn--lg" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
-            <a class="btn btn--on-dark btn--lg" href="https://www.google.com/maps/search/?api=1&query=Cra.+78+%2354-75+Laureles+Medell%C3%ADn" target="_blank" rel="noopener noreferrer">Cómo llegar</a>
+            <a class="btn btn--on-dark btn--lg" href="https://www.google.com/maps/search/?api=1&query=Luis+badel+sala+de+belleza+Carrera+78+54-75+Los+Colores+Medell%C3%ADn" target="_blank" rel="noopener noreferrer">Ver en el mapa</a>
           </div>
         </div>
         <div data-reveal>
@@ -456,6 +473,9 @@
             </table>
             <h3 class="service-card__title u-mt-md u-mb-sm">Ubicación</h3>
             <p class="service-card__desc">Cra. 78 #54-75, barrio Los Colores, Laureles - Estadio, Medellín, Antioquia.</p>
+            <div class="booking-map">
+              <iframe class="booking-map__frame" title="Ubicación de Luis Badel Sala de Belleza en Google Maps" src="https://maps.google.com/maps?q=Luis%20badel%20sala%20de%20belleza%20Carrera%2078%2054-75%20Los%20Colores%20Medellin&output=embed" width="600" height="320" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           </div>
         </div>
       </div>
