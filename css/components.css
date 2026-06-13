@@ -372,7 +372,7 @@
   border-top: 1px solid var(--line);
 }
 
-/* ── Galería (mosaico) ── */
+/* ── Galería (grilla uniforme) ── */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -381,16 +381,8 @@
 
 @media (min-width: 700px) {
   .gallery-grid {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, minmax(180px, 1fr));
-  }
-
-  .gallery-item--wide {
-    grid-column: span 2;
-  }
-
-  .gallery-item--tall {
-    grid-row: span 2;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
   }
 }
 
@@ -398,14 +390,7 @@
   position: relative;
   border-radius: var(--radius-md);
   overflow: hidden;
-  aspect-ratio: 1;
-}
-
-@media (min-width: 700px) {
-  .gallery-item {
-    aspect-ratio: auto;
-    height: 100%;
-  }
+  aspect-ratio: 4 / 5;
 }
 
 .gallery-item img {
@@ -485,9 +470,14 @@
 /* ── Reserva ── */
 .booking-panel {
   background: var(--paper);
+  color: var(--ink);
   border-radius: var(--radius-lg);
   padding: var(--space-lg);
   box-shadow: var(--shadow-card);
+}
+
+.booking-panel .service-card__title {
+  color: var(--ink);
 }
 
 .hours-table {

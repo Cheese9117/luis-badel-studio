@@ -16,13 +16,6 @@
   }
 }
 
-/* ── Tablet ── */
-@media (min-width: 700px) and (max-width: 1023px) {
-  .gallery-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 /* ── Escritorio ── */
 @media (min-width: 1024px) {
   .hero {
@@ -40,11 +33,11 @@
     padding-block: var(--space-sm);
   }
 
-  .index-nav__list {
-    gap: var(--space-sm);
+  .index-nav__link {
+    padding-block: 0.35rem;
   }
 
   .index-nav__brand {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }

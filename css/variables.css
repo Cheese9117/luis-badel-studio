@@ -43,7 +43,7 @@
   /* --- Layout --- */
   --container-width: 1320px;
   --container-pad: clamp(1.25rem, 5vw, 4rem);
-  --index-nav-width: 84px;
+  --index-nav-width: 180px;
   --radius-sm: 4px;
   --radius-md: 10px;
   --radius-lg: 28px;

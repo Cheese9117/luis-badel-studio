@@ -140,17 +140,19 @@
   <!-- ═══ NAV DE ÍNDICE (desktop) ═══ -->
   <nav class="index-nav" aria-label="Índice de secciones">
     <a class="index-nav__brand" href="#inicio">Luis Badel</a>
-    <p class="index-nav__caption">Navegá ↓</p>
-    <ul class="index-nav__list">
-      <li><a class="index-nav__link" href="#inicio" data-section="inicio"><span class="index-nav__dot"></span><span class="index-nav__num">01 — Inicio</span></a></li>
-      <li><a class="index-nav__link" href="#filosofia" data-section="filosofia"><span class="index-nav__dot"></span><span class="index-nav__num">02 — Filosofía</span></a></li>
-      <li><a class="index-nav__link" href="#servicios" data-section="servicios"><span class="index-nav__dot"></span><span class="index-nav__num">03 — Servicios</span></a></li>
-      <li><a class="index-nav__link" href="#galeria" data-section="galeria"><span class="index-nav__dot"></span><span class="index-nav__num">04 — Galería</span></a></li>
-      <li><a class="index-nav__link" href="#estilista" data-section="estilista"><span class="index-nav__dot"></span><span class="index-nav__num">05 — Equipo</span></a></li>
-      <li><a class="index-nav__link" href="#testimonios" data-section="testimonios"><span class="index-nav__dot"></span><span class="index-nav__num">06 — Testimonios</span></a></li>
-      <li><a class="index-nav__link" href="#reserva" data-section="reserva"><span class="index-nav__dot"></span><span class="index-nav__num">07 — Reserva</span></a></li>
-    </ul>
-    <a class="btn btn--outline index-nav__cta" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer" aria-label="Reservar por WhatsApp">WhatsApp</a>
+    <div class="index-nav__body">
+      <p class="index-nav__header">Secciones</p>
+      <ul class="index-nav__list">
+        <li><a class="index-nav__link" href="#inicio" data-section="inicio"><span class="index-nav__num">01</span><span class="index-nav__name">Inicio</span></a></li>
+        <li><a class="index-nav__link" href="#filosofia" data-section="filosofia"><span class="index-nav__num">02</span><span class="index-nav__name">Filosofía</span></a></li>
+        <li><a class="index-nav__link" href="#servicios" data-section="servicios"><span class="index-nav__num">03</span><span class="index-nav__name">Servicios</span></a></li>
+        <li><a class="index-nav__link" href="#galeria" data-section="galeria"><span class="index-nav__num">04</span><span class="index-nav__name">Galería</span></a></li>
+        <li><a class="index-nav__link" href="#estilista" data-section="estilista"><span class="index-nav__num">05</span><span class="index-nav__name">Equipo</span></a></li>
+        <li><a class="index-nav__link" href="#testimonios" data-section="testimonios"><span class="index-nav__num">06</span><span class="index-nav__name">Testimonios</span></a></li>
+        <li><a class="index-nav__link" href="#reserva" data-section="reserva"><span class="index-nav__num">07</span><span class="index-nav__name">Reserva</span></a></li>
+      </ul>
+    </div>
+    <a class="btn btn--primary index-nav__cta" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer" aria-label="Reservar por WhatsApp">WhatsApp</a>
   </nav>
 
   <!-- ═══ HEADER (mobile/tablet) ═══ -->
@@ -312,7 +314,7 @@
         </div>
 
         <div class="gallery-grid u-mt-lg" data-reveal="stagger">
-          <figure class="gallery-item gallery-item--wide gallery-item--tall">
+          <figure class="gallery-item">
             <picture>
               <source srcset="assets/images/foto-1.webp" type="image/webp" />
               <img src="assets/images/foto-1.jpg" alt="Interior del estudio Luis Badel Sala de Belleza, área de cortes y peinados" width="686" height="829" loading="lazy" />
@@ -340,7 +342,7 @@
             </picture>
             <span class="gallery-item__tag">Color</span>
           </figure>
-          <figure class="gallery-item gallery-item--wide">
+          <figure class="gallery-item">
             <picture>
               <source srcset="assets/images/foto-5.webp" type="image/webp" />
               <img src="assets/images/foto-5.jpg" alt="Estación de color y productos profesionales del salón" width="584" height="878" loading="lazy" />

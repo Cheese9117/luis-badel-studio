@@ -36,10 +36,6 @@
   aspect-ratio: 1;
 }
 
-.index-nav__cta {
-  writing-mode: vertical-rl;
-}
-
 .footer-lead {
   max-width: 32ch;
 }
