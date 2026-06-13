@@ -30,9 +30,21 @@
 }
 
 .btn--primary:hover {
-  background: var(--clay);
-  border-color: var(--clay);
+  background: var(--black);
+  border-color: var(--black);
   color: var(--paper);
+}
+
+.btn--light {
+  background: var(--paper);
+  color: var(--ink);
+  border-color: var(--paper);
+}
+
+.btn--light:hover {
+  background: transparent;
+  color: var(--cream);
+  border-color: var(--cream);
 }
 
 .btn--outline {
@@ -131,7 +143,7 @@
   font-family: var(--font-mono);
   font-size: var(--size-label);
   font-style: normal;
-  color: var(--clay);
+  color: var(--silver-light);
 }
 
 .mobile-menu__footer {
@@ -164,6 +176,14 @@
   box-shadow: var(--shadow-card);
 }
 
+.hero__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.05) 55%);
+  pointer-events: none;
+}
+
 .hero__media img {
   width: 100%;
   height: 100%;
@@ -172,6 +192,7 @@
 
 .hero__badge {
   position: absolute;
+  z-index: 2;
   bottom: var(--space-sm);
   left: var(--space-sm);
   background: var(--paper);
@@ -354,7 +375,7 @@
   position: absolute;
   top: var(--space-xs);
   left: var(--space-xs);
-  background: rgba(35, 31, 28, 0.55);
+  background: rgba(0, 0, 0, 0.6);
   color: var(--cream);
   backdrop-filter: blur(4px);
   font-family: var(--font-mono);
@@ -368,9 +389,9 @@
 /* ── Cita destacada / testimonios ── */
 .quote-card {
   background: var(--paper);
+  border: 1px solid var(--ink);
   border-radius: var(--radius-lg);
   padding: var(--space-lg);
-  box-shadow: var(--shadow-soft);
 }
 
 .quote-card__text {
@@ -455,8 +476,12 @@
 
 @media (min-width: 700px) {
   .footer-grid {
-    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
   }
+}
+
+.footer-address {
+  font-style: normal;
 }
 
 .footer-brand {
@@ -493,6 +518,53 @@
   font-family: var(--font-mono);
   font-size: var(--size-label);
   color: var(--blush);
+}
+
+/* ── FAQ (acordeón) ── */
+.faq-list {
+  margin-top: var(--space-lg);
+  border-top: 1px solid var(--line);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-item__q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-md) 0;
+  font-family: var(--font-display);
+  font-size: var(--size-h3);
+  font-style: italic;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-item__q::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item__q::after {
+  content: '+';
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: 1.5rem;
+  color: var(--clay);
+  transition: transform var(--duration-fast) var(--ease-editorial);
+}
+
+.faq-item[open] .faq-item__q::after {
+  content: '–';
+}
+
+.faq-item__a {
+  padding-bottom: var(--space-md);
+  max-width: 60ch;
+  color: var(--ink-soft);
 }
 
 /* ── Back to top ── */

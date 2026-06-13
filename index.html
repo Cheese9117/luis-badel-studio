@@ -75,6 +75,47 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Atienden por orden de llegada o necesito cita previa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Trabajamos preferiblemente con cita previa para garantizarte el horario y el estilista que prefieras. Si tenés disponibilidad de último momento, escribinos por WhatsApp y te confirmamos si podemos atenderte por orden de llegada ese día."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Tienen parqueo disponible?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Estamos en el barrio Los Colores, Laureles, sobre la Cra. 78, una zona residencial con parqueo en vía y parqueaderos públicos a pocos metros."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué marcas de productos usan en los tratamientos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Trabajamos exclusivamente con líneas profesionales de colorimetría y tratamiento capilar, seleccionadas según el tipo de cabello y el resultado que buscás."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto dura un servicio de color o balayage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende del largo y el estado de tu cabello, pero un color completo o un balayage suele tomar entre 2 y 4 horas. Al agendar te damos un estimado de tiempo."
+        }
+      }
+    ]
+  }
+  </script>
+
   <!-- ═══ RENDIMIENTO ═══ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -362,6 +403,35 @@
       </div>
     </section>
 
+    <!-- ═══ FAQ ═══ -->
+    <section class="section section--tight" id="faq">
+      <div class="container">
+        <div data-reveal>
+          <span class="eyebrow">Preguntas frecuentes</span>
+          <h2 class="section-title">Antes de <em>agendar</em>.</h2>
+        </div>
+
+        <div class="faq-list" data-reveal>
+          <details class="faq-item">
+            <summary class="faq-item__q">¿Atienden por orden de llegada o necesito cita previa?</summary>
+            <p class="faq-item__a">Trabajamos preferiblemente con cita previa para garantizarte el horario y el estilista que prefieras. Si tenés disponibilidad de último momento, escribinos por WhatsApp y te confirmamos si podemos atenderte por orden de llegada ese día.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__q">¿Tienen parqueo disponible?</summary>
+            <p class="faq-item__a">Estamos en el barrio Los Colores, Laureles, sobre la Cra. 78, una zona residencial con parqueo en vía y parqueaderos públicos a pocos metros. Si venís en moto o carro, escribinos y te orientamos sobre la mejor opción cercana.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__q">¿Qué marcas de productos usan en los tratamientos?</summary>
+            <p class="faq-item__a">Trabajamos exclusivamente con líneas profesionales de colorimetría y tratamiento capilar, seleccionadas según el tipo de cabello y el resultado que buscás. En tu valoración te explicamos qué producto usaremos y por qué, sin sorpresas.</p>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-item__q">¿Cuánto dura un servicio de color o balayage?</summary>
+            <p class="faq-item__a">Depende del largo y el estado de tu cabello, pero un color completo o un balayage suele tomar entre 2 y 4 horas. Al agendar te damos un estimado de tiempo para que organices tu día con tranquilidad.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- ═══ RESERVA ═══ -->
     <section class="section section--clay" id="reserva">
       <div class="container split-grid">
@@ -370,7 +440,7 @@
           <h2 class="section-title section-title--on-clay">Agenda en <em class="section-title__accent--ink">segundos</em> por WhatsApp.</h2>
           <p class="lead lead--on-clay lead--wide">Escribinos contándonos qué servicio buscás y te confirmamos disponibilidad. Sin formularios largos, sin esperas.</p>
           <div class="hero__cta-group">
-            <a class="btn btn--primary btn--lg" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
+            <a class="btn btn--light btn--lg" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
             <a class="btn btn--on-dark btn--lg" href="https://www.google.com/maps/search/?api=1&query=Cra.+78+%2354-75+Laureles+Medell%C3%ADn" target="_blank" rel="noopener noreferrer">Cómo llegar</a>
           </div>
         </div>
@@ -409,10 +479,18 @@
       </div>
       <div>
         <p class="footer-heading">Ubicación</p>
+        <address class="footer-list footer-address">
+          <span>Cra. 78 #54-75</span>
+          <span>Barrio Los Colores, Laureles - Estadio</span>
+          <span>Medellín, Antioquia, Colombia</span>
+        </address>
+      </div>
+      <div>
+        <p class="footer-heading">Horario</p>
         <ul class="footer-list">
-          <li>Cra. 78 #54-75</li>
-          <li>Barrio Los Colores, Laureles - Estadio</li>
-          <li>Medellín, Antioquia, Colombia</li>
+          <li>Lunes a viernes: 9:00 a.m. – 5:00 p.m.</li>
+          <li>Sábado: 9:00 a.m. – 5:00 p.m.</li>
+          <li>Domingo: cerrado</li>
         </ul>
       </div>
     </div>

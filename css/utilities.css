@@ -13,7 +13,7 @@
 }
 
 .lead--on-clay {
-  color: var(--paper);
+  color: var(--cream);
 }
 
 .lead--wide {
@@ -21,15 +21,15 @@
 }
 
 .eyebrow--on-clay {
-  color: var(--ink);
+  color: var(--silver-light);
 }
 
 .section-title--on-clay {
-  color: var(--paper);
+  color: var(--cream);
 }
 
 .section-title__accent--ink {
-  color: var(--ink);
+  color: var(--silver-light);
 }
 
 .hero__media--square {

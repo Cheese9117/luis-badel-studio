@@ -1,23 +1,30 @@
 /* =============================================================
-   DESIGN TOKENS — Luis Badel · Edición Atelier
-   Sistema editorial: tipografía Fraunces + Sora, paleta terracota
-   sobre crema, acentos en oliva y mostaza.
+   DESIGN TOKENS — Luis Badel · Urbano Premium
+   Sistema editorial monocromo: tipografía Fraunces + Sora,
+   negro absoluto / carbón dominante, blanco tiza de contraste
+   y acento plata cepillada / gris cemento.
    ============================================================= */
 
 :root {
-  /* --- Color --- */
-  --clay: #c1542e;
-  --clay-deep: #9a3f20;
-  --cream: #f7f1e6;
-  --paper: #fffdf9;
-  --ink: #231f1c;
-  --ink-soft: #4a4540;
-  --olive: #454f3c;
-  --olive-deep: #2f362a;
-  --mustard: #d9a13b;
-  --blush: #ecceb9;
-  --line: rgba(35, 31, 28, 0.12);
-  --line-on-dark: rgba(247, 241, 230, 0.16);
+  /* --- Neutrales base --- */
+  --black: #000000;
+  --charcoal: #111111;
+  --ink: #111111;
+  --ink-soft: #5a5a5e;
+  --silver: #8e8e93;
+  --silver-light: #afafaf;
+  --cream: #f5f5f5;
+  --paper: #ffffff;
+
+  /* --- Roles de color (compatibilidad con el sistema modular) --- */
+  --clay: #6e6e73;          /* acento metálico legible sobre claro (estados, eyebrow, em) */
+  --clay-deep: #000000;
+  --olive: #1c1c1c;
+  --olive-deep: #161616;    /* fondo de sección oscura alterna (carbón) */
+  --mustard: #afafaf;       /* numerales y acentos sobre fondos oscuros */
+  --blush: #c7c7cc;         /* texto tenue sobre oscuro */
+  --line: rgba(17, 17, 17, 0.14);
+  --line-on-dark: rgba(245, 245, 245, 0.18);
 
   /* --- Tipografía --- */
   --font-display: 'Fraunces', serif;
@@ -55,8 +62,8 @@
   --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
 
   /* --- Sombras --- */
-  --shadow-card: 0 18px 50px -20px rgba(35, 31, 28, 0.35);
-  --shadow-soft: 0 8px 24px -12px rgba(35, 31, 28, 0.22);
+  --shadow-card: 0 18px 50px -20px rgba(0, 0, 0, 0.45);
+  --shadow-soft: 0 8px 24px -12px rgba(0, 0, 0, 0.28);
 
   /* --- Capas --- */
   --z-index-nav: 100;

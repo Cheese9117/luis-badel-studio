@@ -138,13 +138,20 @@ main {
 }
 
 .section--clay {
-  background: var(--clay);
-  color: var(--paper);
+  background: var(--black);
+  color: var(--cream);
 }
 
 .section--dark h1, .section--dark h2, .section--dark h3, .section--dark h4,
-.section--olive h1, .section--olive h2, .section--olive h3, .section--olive h4 {
+.section--olive h1, .section--olive h2, .section--olive h3, .section--olive h4,
+.section--clay h1, .section--clay h2, .section--clay h3, .section--clay h4 {
   color: var(--cream);
+}
+
+/* Acentos legibles sobre fondos oscuros */
+.section--dark .eyebrow, .section--olive .eyebrow, .section--clay .eyebrow,
+.section--dark .section-title em, .section--olive .section-title em, .section--clay .section-title em {
+  color: var(--silver-light);
 }
 
 /* ── Grids ── */
