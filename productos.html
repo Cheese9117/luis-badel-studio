@@ -44,8 +44,49 @@
   <header class="site-header">
     <a class="site-header__brand" href="index.html#inicio">Luis Badel</a>
     <nav class="site-nav" aria-label="Navegación principal">
-      <a class="site-nav__link" href="index.html#servicios">Servicios</a>
-      <a class="site-nav__link" href="productos.html">Productos</a>
+      <div class="nav-item nav-item--has-menu">
+        <button class="site-nav__link nav-item__trigger" type="button" aria-expanded="false" aria-haspopup="true">Servicios</button>
+        <div class="mega-menu">
+          <div class="mega-menu__col">
+            <p class="mega-menu__title">Nuestros centros</p>
+            <a class="mega-menu__link" href="servicios/color-imagen.html">Color e Imagen Capilar</a>
+            <a class="mega-menu__link" href="servicios/tratamientos.html">Tratamientos &amp; Keratina</a>
+            <a class="mega-menu__link" href="servicios/barberia.html">Barbería</a>
+            <a class="mega-menu__link" href="servicios/manicure.html">Manicure &amp; Pedicure</a>
+            <a class="mega-menu__link" href="servicios/eventos.html">Novias &amp; Eventos</a>
+            <a class="mega-menu__link mega-menu__link--all" href="index.html#servicios">Ver todos los servicios →</a>
+          </div>
+          <a class="mega-menu__feature" href="servicios/color-imagen.html">
+            <picture>
+              <source srcset="assets/images/foto-3-480.webp" type="image/webp" />
+              <img src="assets/images/foto-3-480.jpg" alt="Trabajo de balayage realizado en Luis Badel Sala de Belleza" width="304" height="380" loading="lazy" />
+            </picture>
+            <span class="mega-menu__feature-label">Destacado</span>
+            <span class="mega-menu__feature-title">Color &amp; Balayage de autor</span>
+          </a>
+        </div>
+      </div>
+      <div class="nav-item nav-item--has-menu">
+        <button class="site-nav__link nav-item__trigger" type="button" aria-expanded="false" aria-haspopup="true">Productos</button>
+        <div class="mega-menu">
+          <div class="mega-menu__col">
+            <p class="mega-menu__title">Por necesidad</p>
+            <a class="mega-menu__link" href="productos.html#color">Cuidado del color</a>
+            <a class="mega-menu__link" href="productos.html#hidratacion">Hidratación capilar</a>
+            <a class="mega-menu__link" href="productos.html#reconstruccion">Reconstrucción</a>
+            <a class="mega-menu__link" href="productos.html#styling">Styling y terminación</a>
+            <a class="mega-menu__link mega-menu__link--all" href="productos.html">Ver todo el cuidado en casa →</a>
+          </div>
+          <a class="mega-menu__feature" href="productos.html">
+            <picture>
+              <source srcset="assets/images/foto-5-480.webp" type="image/webp" />
+              <img src="assets/images/foto-5-480.jpg" alt="Productos profesionales usados en Luis Badel Sala de Belleza" width="304" height="380" loading="lazy" />
+            </picture>
+            <span class="mega-menu__feature-label">Recomendado</span>
+            <span class="mega-menu__feature-title">Las líneas que usamos</span>
+          </a>
+        </div>
+      </div>
       <a class="site-nav__link" href="index.html#galeria">Galería</a>
       <a class="site-nav__link" href="index.html#estilista">Nosotros</a>
       <a class="site-nav__link" href="index.html#faq">FAQ</a>
@@ -65,6 +106,15 @@
     <a class="mobile-menu__link" href="index.html#estilista"><span>04</span> Nosotros</a>
     <a class="mobile-menu__link" href="index.html#faq"><span>05</span> FAQ</a>
     <a class="mobile-menu__link" href="index.html#reserva"><span>06</span> Reserva</a>
+    <details class="mobile-sub">
+      <summary class="mobile-sub__summary">Páginas de servicios</summary>
+      <a class="mobile-sub__link" href="servicios/color-imagen.html">Color e Imagen Capilar</a>
+      <a class="mobile-sub__link" href="servicios/tratamientos.html">Tratamientos &amp; Keratina</a>
+      <a class="mobile-sub__link" href="servicios/barberia.html">Barbería</a>
+      <a class="mobile-sub__link" href="servicios/manicure.html">Manicure &amp; Pedicure</a>
+      <a class="mobile-sub__link" href="servicios/eventos.html">Novias &amp; Eventos</a>
+      <a class="mobile-sub__link" href="productos.html">Productos para casa</a>
+    </details>
     <div class="mobile-menu__footer">
       <a href="https://wa.me/573167302467" target="_blank" rel="noopener noreferrer">WhatsApp</a>
       <a href="https://www.instagram.com/luisbadelsaladebelleza/" target="_blank" rel="noopener noreferrer">Instagram</a>
