@@ -1,6 +1,6 @@
 /* =============================================================
    DESIGN TOKENS — Luis Badel · Urbano Premium
-   Sistema editorial monocromo: tipografía Fraunces + Sora,
+   Sistema editorial monocromo: tipografía Jost + Manrope,
    negro absoluto / carbón dominante, blanco tiza de contraste
    y acento plata cepillada / gris cemento.
    ============================================================= */
@@ -27,9 +27,9 @@
   --line-on-dark: rgba(245, 245, 245, 0.18);
 
   /* --- Tipografía --- */
-  --font-display: 'Fraunces', serif;
-  --font-body: 'Sora', sans-serif;
-  --font-mono: 'Space Mono', monospace;
+  --font-display: 'Jost', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+  --font-label: 'Jost', sans-serif;
 
   /* --- Tamaños fluidos --- */
   --size-hero: clamp(2.75rem, 9vw, 7.5rem);

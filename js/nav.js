@@ -64,7 +64,41 @@ function initScrollSpy() {
   sections.forEach((section) => observer.observe(section));
 }
 
+function initDropdowns() {
+  const items = Array.from(document.querySelectorAll('.nav-item--has-menu'));
+  if (!items.length) return;
+
+  const closeAll = (except) => {
+    items.forEach((item) => {
+      if (item === except) return;
+      item.classList.remove('is-open');
+      const trigger = item.querySelector('.nav-item__trigger');
+      if (trigger) trigger.setAttribute('aria-expanded', 'false');
+    });
+  };
+
+  items.forEach((item) => {
+    const trigger = item.querySelector('.nav-item__trigger');
+    if (!trigger) return;
+
+    trigger.addEventListener('click', () => {
+      const isOpen = item.classList.toggle('is-open');
+      trigger.setAttribute('aria-expanded', String(isOpen));
+      closeAll(item);
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.nav-item--has-menu')) closeAll(null);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeAll(null);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initScrollSpy();
+  initDropdowns();
 });
